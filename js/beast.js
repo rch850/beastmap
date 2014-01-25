@@ -1,7 +1,4 @@
 $(document).ready(function() {
-  // カルーセルのセットアップ
-  $("#owl-example").owlCarousel();
-
   // マップの表示
   var map = new OpenLayers.Map("canvas");
   var mapnik = new OpenLayers.Layer.OSM();
@@ -17,14 +14,20 @@ $(document).ready(function() {
 });
 
 // AngularJS のコントローラ
-function BeastCtrl($scope) {
-  $scope.beasts = [
-    {name: "カワウ", imageUrl: ""},
-    {name: "カワウ", imageUrl: ""},
-    {name: "カワウ", imageUrl: ""},
-    {name: "カワウ", imageUrl: ""},
-    {name: "カワウ", imageUrl: ""},
-    {name: "カワウ", imageUrl: ""},
-    {name: "カワウ", imageUrl: ""},
-  ];
+function BeastCtrl($scope, $http) {
+  // データを読み込んで反映する
+  $http.get("data/h24shichobetsu.json").
+    success(function(data, status, headers, config) {
+      $scope.beasts = data.chouju.map(function(c) {
+        return {name: c["鳥獣名"], imageUrl: "#"};
+      });
+
+      // カルーセルのセットアップ
+      // 時間をあけて実行しないとうまくいかない
+      setTimeout(function() {
+        $("#owl-example").owlCarousel();
+      }, 300);
+    }).
+    error(function(data, status, headers, config) {
+    });
 }
