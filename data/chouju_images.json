@@ -1,0 +1,34 @@
+{
+  "chouju": [
+    {
+      "鳥獣名": "カワウ",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/6/68/Phalacrocorax_carbo_Vic.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Phalacrocorax_carbo_Vic.jpg"
+    },
+    {
+      "鳥獣名": "ゴイサギ",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Black_Crowned_Night_Heron_Ottawa.jpg/640px-Black_Crowned_Night_Heron_Ottawa.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Black_Crowned_Night_Heron_Ottawa.jpg"
+    },
+    {
+      "鳥獣名": "アオサギ",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/2/23/Grey_Heron_Dec._20%2C_2012.JPG",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Grey_Heron_Dec._20"
+    },
+    {
+      "鳥獣名": "マガモ",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Mallard02s1500.jpg/320px-Mallard02s1500.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Mallard02s1500.jpg"
+    },
+    {
+      "鳥獣名": "カルガモ",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Anas_zonorhyncha.jpg/300px-Anas_zonorhyncha.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Anas_zonorhyncha.jpg"
+    },
+    {
+      "鳥獣名": "コガモ",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Anas_crecca_carolinensis_%28Green-winged_Teal%29_male.jpg/320px-Anas_crecca_carolinensis_%28Green-winged_Teal%29_male.jpg",
+      "元データ": "http://en.wikipedia.org/wiki/File:Anas_crecca_carolinensis_(Green-winged_Teal)_male.jpg"
+    }
+  ]
+}

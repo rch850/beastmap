@@ -27,6 +27,18 @@ function BeastCtrl($scope, $http) {
       setTimeout(function() {
         $("#owl-example").owlCarousel();
       }, 300);
+
+      // 画像一覧を取ってくる
+      $http.get("data/chouju_images.json").
+        success(function(data, status, headers, config) {
+          data.chouju.forEach(function(c) {
+            $scope.beasts.forEach(function(b) {
+              if (b.name === c["鳥獣名"]) {
+                b.imageUrl = c["画像"];
+              }
+            });
+          });
+        });
     }).
     error(function(data, status, headers, config) {
     });
