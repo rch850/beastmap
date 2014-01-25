@@ -15,3 +15,16 @@ $(document).ready(function() {
     );
   map.setCenter(lonLat, 9);
 });
+
+// AngularJS のコントローラ
+function BeastCtrl($scope) {
+  $scope.beasts = [
+    {name: "カワウ", imageUrl: ""},
+    {name: "カワウ", imageUrl: ""},
+    {name: "カワウ", imageUrl: ""},
+    {name: "カワウ", imageUrl: ""},
+    {name: "カワウ", imageUrl: ""},
+    {name: "カワウ", imageUrl: ""},
+    {name: "カワウ", imageUrl: ""},
+  ];
+}
