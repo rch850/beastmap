@@ -81,14 +81,14 @@ function BeastCtrl($scope, $http) {
     };
 
     function getBeastCount(city) {
-      var key, count = 0;
+      var key, count = 1;
       for (key in beast.data) {
         if (key.indexOf(city) === 0) {
           count += parseInt(beast.data[key]) || 0;
         }
       }
       console.log(city + " => " + count);
-      return count * 100;
+      return Math.sqrt(count) * 1000;
     }
 
     layer.addFeatures([
