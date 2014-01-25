@@ -37,6 +37,7 @@ function BeastCtrl($scope, $http) {
             $scope.beasts.forEach(function(b) {
               if (b.name === c["鳥獣名"]) {
                 b.imageUrl = c["画像"];
+                b.citeUrl = c["元データ"];
               }
             });
           });
