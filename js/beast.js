@@ -30,6 +30,15 @@ function BeastCtrl($scope, $http) {
         $("#owl-example").owlCarousel({
           slideSpeet: 1000
         });
+        
+        // キーボードでカルーセルを移動できるようにする
+        $(window).keydown(function(e) {
+          if (e.keyCode === 37) {        // 左
+            $(".owl-carousel").data('owlCarousel').prev();
+          } else if (e.keyCode === 39) { // 右
+            $(".owl-carousel").data('owlCarousel').next();
+          }
+        });
       }, 300);
 
       // 画像一覧を取ってくる
