@@ -14,8 +14,14 @@
   <div id="canvas"></div>
   <div id="owl-example" class="owl-carousel">
     <div ng-repeat="beast in beasts">
-      <img alt="{{beast.name}}" src="{{beast.imageUrl}}">
-      <span>{{beast.name}}</span>
+      <table class="beast">
+        <tr>
+          <td><img alt="{{beast.name}}" src="{{beast.imageUrl}}"></td>
+        </tr>
+        <tr>
+          <td><span>{{beast.name}}</span></td>
+        </tr>
+      </table>
     </div>
   </div>
   <footer>
