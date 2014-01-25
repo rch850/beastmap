@@ -27,7 +27,9 @@ function BeastCtrl($scope, $http) {
       // カルーセルのセットアップ
       // 時間をあけて実行しないとうまくいかない
       setTimeout(function() {
-        $("#owl-example").owlCarousel();
+        $("#owl-example").owlCarousel({
+          slideSpeet: 1000
+        });
       }, 300);
 
       // 画像一覧を取ってくる
