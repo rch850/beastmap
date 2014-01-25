@@ -1,6 +1,8 @@
+var map;
+
 $(document).ready(function() {
   // マップの表示
-  var map = new OpenLayers.Map("canvas");
+  map = new OpenLayers.Map("canvas");
   var mapnik = new OpenLayers.Layer.OSM();
   map.addLayer(mapnik);
 
@@ -11,30 +13,6 @@ $(document).ready(function() {
       new OpenLayers.Projection("EPSG:900913")
     );
   map.setCenter(lonLat, 9);
-
-  function createCircle(lat, lng) {
-    // 円の描画参考: http://blog.be-style.jpn.com/article/55441141.html
-    // createRegularPolygon 参考: http://osgeo-org.1560.x6.nabble.com/createRegularPolygon-circle-radius-units-td5000250.html
-
-    var point = new OpenLayers.Geometry.Point(lat, lng);
-    point.transform(
-        new OpenLayers.Projection("EPSG:4326"),
-        map.getProjectionObject());
-
-    var sunpoly = OpenLayers.Geometry.Polygon.createRegularPolygon(point, 8000, 36, 0);
-    var circle = new OpenLayers.Feature.Vector(sunpoly, null, null);
-    var layer = new OpenLayers.Layer.Vector("Circle", {style: {
-      strokeColor: "#FF6347",
-      fillColor: "#FF6347",
-      fillOpacity: 0.2,
-      strokeWidth: 4,
-      pointRadius: 10
-    }});
-    layer.addFeatures([circle]);
-
-    return layer;
-  }
-  map.addLayer(createCircle(136.25, 35.85));
 });
 
 // AngularJS のコントローラ
@@ -66,4 +44,30 @@ function BeastCtrl($scope, $http) {
     }).
     error(function(data, status, headers, config) {
     });
+
+  $scope.click = function(name) {
+    function createCircle(lat, lng) {
+      // 円の描画参考: http://blog.be-style.jpn.com/article/55441141.html
+      // createRegularPolygon 参考: http://osgeo-org.1560.x6.nabble.com/createRegularPolygon-circle-radius-units-td5000250.html
+
+      var point = new OpenLayers.Geometry.Point(lat, lng);
+      point.transform(
+          new OpenLayers.Projection("EPSG:4326"),
+          map.getProjectionObject());
+
+      var sunpoly = OpenLayers.Geometry.Polygon.createRegularPolygon(point, 8000, 36, 0);
+      var circle = new OpenLayers.Feature.Vector(sunpoly, null, null);
+      var layer = new OpenLayers.Layer.Vector("Circle", {style: {
+        strokeColor: "#FF6347",
+          fillColor: "#FF6347",
+          fillOpacity: 0.2,
+          strokeWidth: 4,
+          pointRadius: 10
+      }});
+      layer.addFeatures([circle]);
+
+      return layer;
+    }
+    map.addLayer(createCircle(136.25, 35.85));
+  };
 }

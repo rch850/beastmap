@@ -14,7 +14,7 @@
   <div id="canvas"></div>
   <div id="owl-example" class="owl-carousel">
     <div ng-repeat="beast in beasts">
-      <table class="beast">
+      <table class="beast" ng-click="click(beast.name)">
         <tr>
           <td><img alt="{{beast.name}}" src="{{beast.imageUrl}}"></td>
         </tr>
