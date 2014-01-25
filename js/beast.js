@@ -1,3 +1,6 @@
+$(document).ready(function() {
+  $("#owl-example").owlCarousel();
+});
 (function() {
   window.addEventListener("load", function() {
     var map = new OpenLayers.Map("canvas");
