@@ -64,6 +64,31 @@
       "鳥獣名": "タヌキ",
       "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Tanuki01_960.jpg/320px-Tanuki01_960.jpg",
       "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Tanuki01_960.jpg"
+    },
+    {
+      "鳥獣名": "イノシシ",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/f/f2/Zwijntje_lowpx.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Zwijntje_lowpx.jpg"
+    },
+    {
+      "鳥獣名": "ハクビシン",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Palm_civet_on_tree_%28detail%29.jpg/317px-Palm_civet_on_tree_%28detail%29.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Palm_civet_on_tree_(detail).jpg"
+    },
+    {
+      "鳥獣名": "アナグマ",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Meles_meles_anakuma.jpg/480px-Meles_meles_anakuma.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Meles_meles_anakuma.jpg"
+    },
+    {
+      "鳥獣名": "ニホンジカ（オス）",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/c/c6/C.n.centralis.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:C.n.centralis.jpg"
+    },
+    {
+      "鳥獣名": "ニホンジカ（メス）",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/c/c6/C.n.centralis.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:C.n.centralis.jpg"
     }
   ]
 }
