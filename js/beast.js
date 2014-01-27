@@ -44,13 +44,15 @@ function BeastCtrl($scope, $http) {
       // 画像一覧を取ってくる
       $http.get("data/chouju_images.json").
         success(function(data, status, headers, config) {
-          data.chouju.forEach(function(c) {
-            $scope.beasts.forEach(function(b) {
-              if (b.name === c["鳥獣名"]) {
-                b.imageUrl = c["画像"];
-                b.citeUrl = c["元データ"];
-              }
-            });
+          $scope.beasts = $scope.beasts.map(function(b) {
+            var c = _.find(data.chouju, (function(c) {
+              return b.name === c["鳥獣名"];
+            }));
+            if (c) {
+              b.imageUrl = c["画像"];
+              b.citeUrl = c["元データ"];
+            }
+            return b;
           });
         });
     }).
