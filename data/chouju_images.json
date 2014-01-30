@@ -52,16 +52,23 @@
     },
     {
       "鳥獣名": "ヤマドリ",
-      "画像": "http://upload.wikimedia.org/wikipedia/commons/4/4d/Stavenn_Syrmaticus_soemmerringii_ijimae_.jpghttp://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Stavenn_Syrmaticus_soemmerringii_ijimae_.jpg"
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/4/4d/Stavenn_Syrmaticus_soemmerringii_ijimae_.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Stavenn_Syrmaticus_soemmerringii_ijimae_.jpg"
     },
     {
       "鳥獣名": "キジ",
-      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Phasianus_versicolor_in_field.JPG/320px-Phasianus_versicolor_in_field.JPGhttp://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Phasianus_versicolor_in_field.JPG"
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Phasianus_versicolor_in_field.JPG/320px-Phasianus_versicolor_in_field.JPG",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Phasianus_versicolor_in_field.JPG"
     },
     {
       "鳥獣名": "バン",
       "画像": "http://upload.wikimedia.org/wikipedia/commons/4/4e/Moorhen.jpg",
       "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Moorhen.jpg"
+    },
+    {
+      "鳥獣名": "ヤマシギ",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Woodcock_earthworm.jpg/240px-Woodcock_earthworm.jpg",
+      "元データ": "http://en.wikipedia.org/wiki/File:Woodcock_earthworm.jpg"
     },
     {
       "鳥獣名": "タシギ",
@@ -87,6 +94,31 @@
       "鳥獣名": "ムクドリ",
       "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Spodiopsar_cineraceus.jpg/300px-Spodiopsar_cineraceus.jpg",
       "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Spodiopsar_cineraceus.jpg"
+    },
+    {
+      "鳥獣名": "ハシボソガラス",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Corvus_corone_Rabenkr%C3%A4he_1.jpg/320px-Corvus_corone_Rabenkr%C3%A4he_1.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Corvus_corone_Rabenkr%C3%A4he_1.jpg"
+    },
+    {
+      "鳥獣名": "ハシブトガラス",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Corvus_macrorhynchos%28head%29.jpg/320px-Corvus_macrorhynchos%28head%29.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Corvus_macrorhynchos(head).jpg"
+    },
+    {
+      "鳥獣名": "ドバト",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Columba_livia_in_Japan.JPG/279px-Columba_livia_in_Japan.JPG",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Columba_livia_in_Japan.JPG"
+    },
+    {
+      "鳥獣名": "カラス類",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Kolkrabe.jpg/303px-Kolkrabe.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Kolkrabe.jpg"
+    },
+    {
+      "鳥獣名": "鳥類（種不明）",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/King_Penguin%27s_Toboggan_in_Asahiyama_Zoo.jpg/320px-King_Penguin%27s_Toboggan_in_Asahiyama_Zoo.jpg",
+      "元データ": "http://commons.wikimedia.org/wiki/File:King_Penguin%27s_Toboggan_in_Asahiyama_Zoo.jpg"
     },
     {
       "鳥獣名": "ニホンザル",
@@ -119,6 +151,21 @@
       "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Tanuki01_960.jpg"
     },
     {
+      "鳥獣名": "キツネ",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/0/03/Vulpes_vulpes_laying_in_snow.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Vulpes_vulpes_laying_in_snow.jpg"
+    },
+    {
+      "鳥獣名": "ホンドテン",
+      "画像": "http://farm9.staticflickr.com/8218/8262946353_f26dd34742_n.jpg",
+      "元データ": "http://www.flickr.com/photos/24256658@N06/8262946353/sizes/l/"
+    },
+    {
+      "鳥獣名": "イタチ（オス）",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Mustela_itatsi_on_tree.JPG/307px-Mustela_itatsi_on_tree.JPG",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Mustela_itatsi_on_tree.JPG"
+    },
+    {
       "鳥獣名": "イノシシ",
       "画像": "http://upload.wikimedia.org/wikipedia/commons/f/f2/Zwijntje_lowpx.jpg",
       "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Zwijntje_lowpx.jpg"
@@ -139,9 +186,34 @@
       "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:C.n.centralis.jpg"
     },
     {
+      "鳥獣名": "イタチ（性不明）",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Mustela_itatsi_on_tree.JPG/307px-Mustela_itatsi_on_tree.JPG",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Mustela_itatsi_on_tree.JPG"
+    },
+    {
+      "鳥獣名": "ニホンジカ（性不明）",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/c/c6/C.n.centralis.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:C.n.centralis.jpg"
+    },
+    {
+      "鳥獣名": "イタチ（メス）",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Mustela_itatsi_on_tree.JPG/307px-Mustela_itatsi_on_tree.JPG",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Mustela_itatsi_on_tree.JPG"
+    },
+    {
       "鳥獣名": "ニホンジカ（メス）",
       "画像": "http://upload.wikimedia.org/wikipedia/commons/c/c6/C.n.centralis.jpg",
       "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:C.n.centralis.jpg"
+    },
+    {
+      "鳥獣名": "トビの卵",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Coturnix_coturnix_eggs.jpg/320px-Coturnix_coturnix_eggs.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Coturnix_coturnix_eggs.jpg"
+    },
+    {
+      "鳥獣名": "カラス類の卵",
+      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Coturnix_coturnix_eggs.jpg/320px-Coturnix_coturnix_eggs.jpg",
+      "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Coturnix_coturnix_eggs.jpg"
     }
   ]
 }
