@@ -1,6 +1,6 @@
-var map;
+let map;
 
-$(document).ready(function() {
+$(document).ready(function () {
   // マップの表示
   map = new ol.Map({
     target: "canvas",
@@ -20,20 +20,20 @@ $(document).ready(function() {
 function BeastCtrl($scope, $http) {
   // データを読み込んで反映する
   $http.get("data/h24shichobetsu.json").
-    success(function(data, status, headers, config) {
-      $scope.beasts = data.chouju.map(function(c) {
-        return {name: c["鳥獣名"], imageUrl: "#", data: c};
+    success(function (data, status, headers, config) {
+      $scope.beasts = data.chouju.map(function (c) {
+        return { name: c["鳥獣名"], imageUrl: "#", data: c };
       });
 
       // カルーセルのセットアップ
       // 時間をあけて実行しないとうまくいかない
-      setTimeout(function() {
+      setTimeout(function () {
         $("#owl-example").owlCarousel({
           slideSpeet: 1000
         });
-        
+
         // キーボードでカルーセルを移動できるようにする
-        $(window).keydown(function(e) {
+        $(window).keydown(function (e) {
           if (e.keyCode === 37) {        // 左
             $(".owl-carousel").data('owlCarousel').prev();
           } else if (e.keyCode === 39) { // 右
@@ -44,11 +44,9 @@ function BeastCtrl($scope, $http) {
 
       // 画像一覧を取ってくる
       $http.get("data/chouju_images.json").
-        success(function(data, status, headers, config) {
-          $scope.beasts = $scope.beasts.map(function(b) {
-            var c = _.find(data.chouju, (function(c) {
-              return b.name === c["鳥獣名"];
-            }));
+        success(function (data, status, headers, config) {
+          $scope.beasts = $scope.beasts.map(function (b) {
+            const c = data.chouju.find(c => b.name === c["鳥獣名"])
             if (c) {
               b.imageUrl = c["画像"];
               b.citeUrl = c["元データ"];
@@ -57,10 +55,10 @@ function BeastCtrl($scope, $http) {
           });
         });
     }).
-    error(function(data, status, headers, config) {
+    error(function (data, status, headers, config) {
     });
 
-  $scope.click = function(name) {
+  $scope.click = function (name) {
     // 登録済みのレイヤーを全部削除
     map.getLayers().forEach((layer, i) => {
       if (i !== 0) {
@@ -68,11 +66,8 @@ function BeastCtrl($scope, $http) {
       }
     })
 
-    var beast = $scope.beasts.filter(function(b) {
-      return b.name === name;
-    });
-    if (beast.length <= 0) { return; }
-    beast = beast[0];
+    const beast = $scope.beasts.find(b => b.name === name);
+    if (!beast) { return; }
 
     // 円の描画参考: https://gis.stackexchange.com/questions/187825/drawing-circle-with-openlayers3-but-not-seeing-on-map
 
@@ -85,7 +80,7 @@ function BeastCtrl($scope, $http) {
     }
 
     function getBeastCount(city) {
-      var key, count = 1;
+      let key, count = 1;
       for (key in beast.data) {
         if (key.indexOf(city) === 0) {
           count += parseInt(beast.data[key]) || 0;
