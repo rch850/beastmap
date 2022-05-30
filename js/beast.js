@@ -2,17 +2,18 @@ var map;
 
 $(document).ready(function() {
   // マップの表示
-  map = new OpenLayers.Map("canvas");
-  var mapnik = new OpenLayers.Layer.OSM();
-  map.addLayer(mapnik);
-
-  //35.85455&lon=136.24695
-  var lonLat = new OpenLayers.LonLat(136.25, 35.85)
-    .transform(
-      new OpenLayers.Projection("EPSG:4326"),
-      new OpenLayers.Projection("EPSG:900913")
-    );
-  map.setCenter(lonLat, 9);
+  map = new ol.Map({
+    target: "canvas",
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM()
+      }),
+    ],
+    view: new ol.View({
+      center: ol.proj.fromLonLat([136.25, 35.85]),
+      zoom: 9
+    })
+  });
 });
 
 // AngularJS のコントローラ
@@ -61,9 +62,11 @@ function BeastCtrl($scope, $http) {
 
   $scope.click = function(name) {
     // 登録済みのレイヤーを全部削除
-    map.getLayersByName("Circle").forEach(function(layer) {
-      map.removeLayer(layer);
-    });
+    map.getLayers().forEach((layer, i) => {
+      if (i !== 0) {
+        map.removeLayer(layer)
+      }
+    })
 
     var beast = $scope.beasts.filter(function(b) {
       return b.name === name;
@@ -71,27 +74,15 @@ function BeastCtrl($scope, $http) {
     if (beast.length <= 0) { return; }
     beast = beast[0];
 
-    // 円の描画参考: http://blog.be-style.jpn.com/article/55441141.html
-    // createRegularPolygon 参考: http://osgeo-org.1560.x6.nabble.com/createRegularPolygon-circle-radius-units-td5000250.html
-
-    var layer = new OpenLayers.Layer.Vector("Circle", {style: {
-      strokeColor: "#FF6347",
-        fillColor: "#FF6347",
-        fillOpacity: 0.2,
-        strokeWidth: 4,
-        pointRadius: 10
-    }});
+    // 円の描画参考: https://gis.stackexchange.com/questions/187825/drawing-circle-with-openlayers3-but-not-seeing-on-map
 
     function createCircle(lat, lng, radius) {
-      var point = new OpenLayers.Geometry.Point(lng, lat);
-      point.transform(
-          new OpenLayers.Projection("EPSG:4326"),
-          map.getProjectionObject());
-
-      var sunpoly = OpenLayers.Geometry.Polygon.createRegularPolygon(point, radius, 36, 0);
-      var circle = new OpenLayers.Feature.Vector(sunpoly, null, null);
-      return circle;
-    };
+      return new ol.Feature(
+        new ol.geom.Circle(
+          ol.proj.transform([lng, lat], 'EPSG:4326', 'EPSG:3857'), radius
+        )
+      )
+    }
 
     function getBeastCount(city) {
       var key, count = 1;
@@ -104,7 +95,9 @@ function BeastCtrl($scope, $http) {
       return Math.sqrt(count) * 1000;
     }
 
-    layer.addFeatures([
+    const vectorSource = new ol.source.Vector({
+      projection: 'EPSG:4326',
+      features: [
         createCircle(36.05475, 136.22266, getBeastCount("福井市")),
         createCircle(36.08513, 136.2979, getBeastCount("永平寺町")),
         createCircle(36.21653, 136.23644, getBeastCount("あわら市")),
@@ -122,7 +115,23 @@ function BeastCtrl($scope, $http) {
         createCircle(35.48494, 135.75545, getBeastCount("小浜市")),
         createCircle(35.48578, 135.55083, getBeastCount("高浜町")),
         createCircle(35.47824, 135.61606, getBeastCount("おおい町")),
-    ]);
+      ]
+    })
+
+    const layer = new ol.layer.Vector({
+      source: vectorSource,
+      style: [
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({
+            color: "rgb(255 104 71)",
+            width: 2
+          }),
+          fill: new ol.style.Fill({
+            color: "rgb(255 104 71 / 20%)"
+          })
+        })
+      ]
+    })
 
     map.addLayer(layer);
   };
